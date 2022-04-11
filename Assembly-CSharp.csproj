@@ -36,8 +36,10 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\script\PlayerMovement.cs" />
      <Compile Include="Assets\script\CameraMovement.cs" />
+     <Compile Include="Assets\script\PlayerMovement.cs" />
+     <Compile Include="Assets\script\ScoreScript.cs" />
+     <Compile Include="Assets\script\EnemyPatrol.cs" />
      <None Include="Assets\object\Abstract Platformer\License.txt" />
      <None Include="Assets\object\Abstract Platformer\Spritesheet\spritesheet_players.xml" />
      <None Include="Assets\object\Abstract Platformer\Spritesheet\spritesheet_items.xml" />
