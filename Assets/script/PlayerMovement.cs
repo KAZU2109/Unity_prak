@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float stomp;
     private Animator animato;
     private bool landed;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,4 +55,16 @@ public class PlayerMovement : MonoBehaviour
         else if(collision.gameObject.tag == "Water")
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public IEnumerator KnockBack(float knockTm, float knockPw, Vector3 direct)
+    {
+        float timer = 0;
+        while(knockTm > timer)
+        {
+            timer+=Time.deltaTime;
+            body.AddForce(new Vector3(direct.x * -100, direct.y * knockPw, transform.position.z));
+        }
+        yield return 0;
+    }
+
 }
